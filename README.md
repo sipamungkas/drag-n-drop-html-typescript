@@ -3,20 +3,19 @@
 ## Contents
 
 - [Description](#description)
+- [Project Preview](#preview)
 - [Features](#features)
-- [Requirements](#requirements)
 - [Installation](#installation)
-- [Screenshots](#screenshots)
-
-## Description
-
-In this project I learn how to implemented my learning progress of typescript. I make a drag and drop project with typescript in class
 
 ## Preview
 
 <div style="text-align:center">
 <img src="docs/drag-n-drop-sipamungkas.gif" alt="Drag and drop preview" height="auto" width="auto"/>
 </div>
+
+## Description
+
+In this project I learn how to implemented my learning progress of typescript. I make a drag and drop project with typescript in OOP. I hope you enjoy it.
 
 ## Features
 
@@ -57,3 +56,5 @@ $ tsc
 ```bash
 $ yarn start
 ```
+
+### Thank you :)
