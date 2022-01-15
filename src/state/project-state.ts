@@ -1,4 +1,4 @@
-import { Project, ProjectStatus } from '../models/project.js';
+import { Project, ProjectStatus } from '../models/project';
 
 // Project State Management
 type Listener<T> = (items: T[]) => void;
@@ -44,7 +44,9 @@ export class ProjectState extends State<Project> {
   }
 
   moveProject(projectId: string, newStatus: ProjectStatus) {
-    const projectItem = this.projects.find(project => project.id === projectId);
+    const projectItem = this.projects.find(
+      (project) => project.id === projectId
+    );
     if (projectItem && projectItem.status !== newStatus) {
       projectItem.status = newStatus;
       this.updateLiseteners();

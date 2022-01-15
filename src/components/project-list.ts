@@ -1,10 +1,10 @@
-import { Component } from './base-component.js';
-import { DragTarget } from '../models/drag-drop.js';
-import { Project } from '../models/project.js';
-import { autobind } from '../decorators/autobind.js';
-import { projectState } from '../state/project-state.js';
-import { ProjectStatus } from '../models/project.js';
-import { ProjectItem } from './project-item.js';
+import { Component } from './base-component';
+import { DragTarget } from '../models/drag-drop';
+import { Project } from '../models/project';
+import { autobind } from '../decorators/autobind';
+import { projectState } from '../state/project-state';
+import { ProjectStatus } from '../models/project';
+import { ProjectItem } from './project-item';
 
 // Projectlist Class
 export class ProjectList
@@ -52,7 +52,7 @@ export class ProjectList
     this.element.addEventListener('dragleave', this.dragLeaveHandler);
     this.element.addEventListener('drop', this.dropHandler);
     projectState.addListener((projects: Project[]) => {
-      const relevantProjects = projects.filter(project => {
+      const relevantProjects = projects.filter((project) => {
         if (this.type === 'active') {
           return project.status === ProjectStatus.Active;
         }
